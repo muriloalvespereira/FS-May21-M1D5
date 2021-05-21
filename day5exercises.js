@@ -52,7 +52,14 @@ console.log(`Exercise 4 another way ${boundary2(17)}`)
 Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
-
+function strivify(a){
+    if (a.startsWith ("Strive")){
+        return a
+    } else{
+        return " Strive " + a
+    }
+}
+console.log(strivify("Hello"))
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 6
