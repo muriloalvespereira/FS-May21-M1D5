@@ -18,19 +18,19 @@ Write a function "crazySum" which receives two integers. It should return the su
 */
 let crazySum = function(a, b){
     if (a !== b){
-        let resultSum = a + b
-        console.log(resultSum)
+        return a + b
     } else {
-        let resultMultiply = (a + b) * 3
-        console.log(resultMultiply)
+        return (a + b) * 3
     }
 }
 
-crazySum(2, 2)
+console.log(crazySum(2, 2))
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
 It should return triple their absolute difference if the given number is greater than 19.
 */
+const crazyDiff = (num1) => num1 > 19 ? Math.abs(num1-19)*3 : Math.abs (num1 - 19);
+console.log(`Exercise3 ${crazyDiff(7)}`)
 
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
