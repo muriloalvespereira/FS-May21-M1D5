@@ -92,8 +92,33 @@ function reverse(s) {
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
+let firstOne
+let secondOne
+function upperFirst (changeFirst){
+    if (/\s/g.test(changeFirst)){
+        let arrayUpper = changeFirst.split(' ');
+        firstOne = arrayUpper[0];
+        secondOne = arrayUpper[1];
+        return (firstOne[0].toUpperCase() + firstOne.slice(1)) + " " +
+        secondOne[0].toUpperCase() + secondOne.slice(1);
+       
+    }
+}
+console.log(upperFirst("murilo alves"))
+
+
+function upperFirst1(string){
+    let separateWord = string.toLowerCase().split(' ');
+    for (let i = 0; i < separateWord.length; i++) {
+       separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+       separateWord[i].slice(1);
+    }
+    return separateWord.join(' ');
+}
+console.log(upperFirst1("this is a test for exerise"))
 
 /* WRITE YOUR CODE HERE */
+
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
