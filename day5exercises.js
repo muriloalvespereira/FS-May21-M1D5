@@ -115,7 +115,8 @@ function upperFirst1(string){
     }
     return separateWord.join(' ');
 }
-console.log(upperFirst1("this is a test for exerise"))
+console.log(upperFirst1("this is a test for exercise"))
+
 
 /* WRITE YOUR CODE HERE */
 
@@ -123,7 +124,13 @@ console.log(upperFirst1("this is a test for exerise"))
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
-
+function cutString(givenString){
+    let splitWord = givenString.split('');
+    splitWord.shift();
+    splitWord.pop();
+    return splitWord.join('');
+}
+console.log(cutString("Vamos"))
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 10
