@@ -115,7 +115,7 @@ function upperFirst1(string){
     }
     return separateWord.join(' ');
 }
-console.log(upperFirst1("this is a test for exercise"))
+console.log(upperFirst1("jim-bim john's mcdonald is a test for exercise"))
 
 
 /* WRITE YOUR CODE HERE */
@@ -136,6 +136,14 @@ console.log(cutString("Vamos"))
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
+function giveMeRandom(numberRandom) {
+    let array = [];
+    for (let i = 0; i <= numberRandom; i++) {
+      array.push(Math.floor(Math.random() * 10));
+    }
+    return array;
+  }
+  console.log(giveMeRandom(8));
 
 /* WRITE YOUR CODE HERE */
 
