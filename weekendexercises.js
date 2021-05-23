@@ -61,6 +61,12 @@ console.log(filtered)
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
+function dice(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+  
+const rndInt = dice(1, 6)
+  console.log(`Random num between 1-6: ${rndInt}`)
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
