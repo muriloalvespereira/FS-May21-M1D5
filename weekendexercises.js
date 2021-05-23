@@ -121,7 +121,12 @@ console.log(isThisAnEmail("murilo.udi@gmail.com"))
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
-
+function whatDayIsIt(){
+let options = {  weekday: 'long' };
+let prnDate = 'Local Time ' + new Date().toLocaleTimeString('en-us', options);
+return prnDate
+}
+console.log(whatDayIsIt());
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
