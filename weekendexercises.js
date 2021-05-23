@@ -72,6 +72,10 @@ const rndInt = dice(1, 6)
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
 
+function whoIsBigger(num1, num2){
+   return Math.max(num1, num2);
+}
+console.log(whoIsBigger(10,20))
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
