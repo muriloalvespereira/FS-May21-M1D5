@@ -152,16 +152,14 @@ rollTheDices(7);
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
-function howManyDays(date){
-    let today = new Date()
-    let givendate= new Date(date)
-    let dateOne=givendate.valueOf()
-    let dateTwo=today.valueOf()
-    let numDays = (dateTwo - dateOne) / 86400000;
-    numDays = Math.round(numDays - 0.5);
-    return numDays;
-  }
-  console.log(howManyDays("2021-03-15"), "Days ago")
+  function howManyDays(dt) {
+    let current = new Date(dt);
+    let previous = new Date();
+    
+    return Math.ceil(((previous - current + 1) / 86400000)-1);
+  } 
+  console.log(howManyDays(new Date("2021-05-19")));
+ 
 /* Ex.10
   
 /* Ex.10
