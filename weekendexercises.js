@@ -113,7 +113,11 @@ console.log(onlyLetters("My name is Murilo and I am 33 years old"))
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
-
+function isThisAnEmail(anEmail){  
+        let re = /^[^\s@]+@[^\s@]+$/;
+        return re.test(anEmail);
+}
+console.log(isThisAnEmail("murilo.udi@gmail.com"))
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
