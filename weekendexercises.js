@@ -122,7 +122,7 @@ console.log(isThisAnEmail("murilo.udi@gmail.com"))
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 function whatDayIsIt(){
-let options = {  weekday: 'long' };
+let options = {  weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric', };
 let prnDate = 'Local Time ' + new Date().toLocaleTimeString('en-us', options);
 return prnDate
 }
@@ -152,7 +152,18 @@ rollTheDices(7);
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
-
+function howManyDays(date){
+    let today = new Date()
+    let givendate= new Date(date)
+    let dateOne=givendate.valueOf()
+    let dateTwo=today.valueOf()
+    let numDays = (dateTwo - dateOne) / 86400000;
+    numDays = Math.round(numDays - 0.5);
+    return numDays;
+  }
+  console.log(howManyDays("2021-03-15"), "Days ago")
+/* Ex.10
+  
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
