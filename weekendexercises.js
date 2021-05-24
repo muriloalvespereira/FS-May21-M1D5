@@ -307,26 +307,6 @@ deleteProp(exer11, exer11Two);
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
-/*let checkMovies = movies.length;
-console.log(checkMovies);
-
-function olderMovie(movies, property){
-    let results = [];
-	let highest = 0
-    for(let i=0; i<movies.length;i++){
-      if(i>=highest){
-		results.push(movies[i]); 
-		highest = movies[i][property]; 
-      }
-      else if(movies[i][property] === highest){
-        results.push(movies[i])
-      }
-    }
-    return results
-   }
-
-olderMovie(movies, 'year');
-*/
 
 function olderMovie(movies){
 let output = []; 
@@ -349,7 +329,10 @@ olderMovie(movies);
 /* Ex.13
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
 */
-
+function countMovies(movies){
+    return console.log(movies.length)
+}
+countMovies(movies);
 /* Ex.14
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
 */
