@@ -336,7 +336,24 @@ countMovies(movies);
 /* Ex.14
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
 */
-
+function onlyTheTitles(movies){
+    let output = [];
+    let sumCon = [" "];
+    let titleOne = " ";
+    for(let i=0; i<movies.length; i++) {
+        let obj = movies[i]["Title"]; 
+        if (obj !== titleOne){ 
+            output.push(obj); 
+            sumCon += obj; 
+        } 
+        else if(obj === titleOne) { 
+            output.push(obj); 
+        } 
+    } 
+    return console.log(output);
+}
+    onlyTheTitles(movies);
+    
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
