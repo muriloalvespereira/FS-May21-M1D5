@@ -166,6 +166,12 @@ rollTheDices(7);
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 
+function isTodayMyBirthday(dateBirth) {
+    let today = new Date();
+    return dateBirth.getDate() === today.getDate() && dateBirth.getMonth() === today.getMonth();
+}
+
+console.log("Is today ? ", isTodayMyBirthday(new Date('1988-02-02')));
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
