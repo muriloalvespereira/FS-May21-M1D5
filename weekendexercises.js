@@ -338,13 +338,11 @@ countMovies(movies);
 */
 function onlyTheTitles(movies){
     let output = [];
-    let sumCon = [" "];
     let titleOne = " ";
     for(let i=0; i<movies.length; i++) {
         let obj = movies[i]["Title"]; 
         if (obj !== titleOne){ 
             output.push(obj); 
-            sumCon += obj; 
         } 
         else if(obj === titleOne) { 
             output.push(obj); 
@@ -357,6 +355,18 @@ function onlyTheTitles(movies){
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
+function onlyInThisMillennium(movies){
+  let output = [];
+  let oldest = 2000; 
+  for(let i=0; i<movies.length; i++) { 
+    let obj = movies[i]; 
+    if(obj["Year"] > oldest) {  
+      output.push(obj); 
+    } 
+  } 
+  return console.log(output);
+  }
+  onlyInThisMillennium(movies);
 
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
